@@ -1,0 +1,5 @@
+==  Setup
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
+==  Aliases
+    Set-Alias -Name k -Value kubectl -Description 'Kubernetes kubectl shorthand'
