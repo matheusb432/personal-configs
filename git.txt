@@ -1,0 +1,7 @@
+==  Setup
+    git config --global push.default current
+        --  set the default push behavior to current branch
+    git config user.email -g "matheus.mab432@gmail.com"
+        --  set the global user.email 
+    git config user.name -g "Matheus Bastos"
+        --  set the global user.name

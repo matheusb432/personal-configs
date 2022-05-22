@@ -1,5 +1,6 @@
 ==  Setup
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+        -- Required for running scripts as administrator.
 
 ==  Aliases
     Set-Alias -Name k -Value kubectl -Description 'Kubernetes kubectl shorthand'
