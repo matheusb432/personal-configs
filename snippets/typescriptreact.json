@@ -1,0 +1,87 @@
+{
+  "Arrow function component": {
+    "prefix": "sfc",
+    "body": [
+      "const $1 = () => {",
+      "return (<$2>$3</$2>);",
+      "};",
+      "\n",
+      "export default $1;"
+    ]
+  },
+  "Arrow function component with scss import": {
+    "prefix": "isfc",
+    "body": [
+      "import styles from './style.module.scss';",
+      "\n",
+      "interface $1Props {",
+      "$2",
+      "}",
+      "\n",
+      "const $1 = ({$2}: $1Props) => {",
+      "return (<>$3</>);",
+      "};",
+      "\n",
+      "export { $1 };"
+    ]
+  },
+  "Import scss": {
+    "prefix": "icss",
+    "body": ["import styles from './$1.module.scss';"]
+  },
+  "Context with provider": {
+    "prefix": "ctxp",
+    "body": [
+      "import { createContext, ReactNode } from 'react';",
+      "\n",
+      "interface $1ContextProps {",
+      "$2",
+      "}",
+      "\n",
+      "interface $1ContextProviderProps {",
+      "children: ReactNode;",
+      "}",
+      "\n",
+      "const $1Context = createContext<$1ContextProps>({",
+      "// TODO add default '$2' values here",
+      "})",
+      "\n",
+      "const $1ContextProvider = ({children}: $1ContextProviderProps) => {",
+      "// TODO implement '$2' here",
+      "\n",
+      "return (<$1Context.Provider value={{$2}}>",
+      "{children}",
+      "</$1Context.Provider>);",
+      "};",
+      "\n",
+      "export default $1Context;",
+      "export { $1ContextProvider };"
+    ]
+  },
+  "Reducer pattern with types": {
+    "prefix": "rpt",
+    "body": [
+      "interface $1Action {",
+      "type: $1Actions;",
+      "payload: $1;",
+      "};",
+      "\n",
+      "interface $1State {",
+      "};",
+      "\n",
+      "const initialState: $1State = {",
+      "};",
+      "const $1Reducer = (state: $1State, action: $1Action) => {",
+      "const { type, payload } = action;",
+      "\n",
+      "switch (type) {",
+      "default:",
+      "return { ...state };",
+      "};",
+      "}",
+      "\n",
+      "export { $1Reducer, initialState };",
+      "export type { $1State, $1Action };"
+    ]
+  }
+}
