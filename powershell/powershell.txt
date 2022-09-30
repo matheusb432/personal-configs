@@ -5,3 +5,7 @@
 ==  Aliases
     Set-Alias -Name k -Value kubectl -Description 'Kubernetes kubectl shorthand'
     Set-Alias -Name dn -Value dotnet -Description '.NET dotnet shorthand'
+
+==  Misc
+    Split-Path -leaf -path (Get-Location) 
+        --  Shortens the directory path to only the current folder
