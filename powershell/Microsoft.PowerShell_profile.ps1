@@ -2,10 +2,9 @@ Set-Alias -Name k -Value kubectl -Description 'Kubernetes kubectl shorthand'
 Set-Alias -Name dn -Value dotnet -Description '.NET dotnet shorthand'
 Set-Alias -Name sk -Value skaffold -Description 'Skaffold skaffold shorthand'
 # Usage: rfc -c componentName (will be capitalized)
-Set-Alias -Name rfc -Value New-React-Fc -Description 'React functional component'
+Set-Alias -Name rfc -Value New-Rfc-WithPath -Description 'React functional component'
 # Usage: rffc -c componentName (will be capitalized)
-Set-Alias -Name rffc -Value New-React-Ffc -Description 'React functional component with filename'
- 
+Set-Alias -Name rffc -Value New-Rffc-WithPath -Description 'React functional component with filename'
 
 
 function prompt {
@@ -26,17 +25,29 @@ function New-Files {
   }
 }
 
+function New-Rfc-WithPath {
+  param ([string] $ComponentName)
+
+  New-React-Fc -c $ComponentName -WithSrc $true -WithComp $true
+}
+
+function New-Rffc-WithPath {
+  param ([string] $ComponentName)
+
+  New-React-Ffc -c $ComponentName -WithSrc $true -WithComp $true
+}
+
 
 function New-React-Fc {
   param (
-    [string]$ComponentName
+    [string]$ComponentName,
+    [bool]$WithSrc = $false,
+    [bool]$WithComp = $false
     )
 
-    $firstChar = $ComponentName.Substring(0, 1).ToUpper()
-    $capitalizedString = $firstChar + $ComponentName.Substring(1)
+    $normalized = Normalize-ComponentName -ComponentName $ComponentName -WithSrc $WithSrc -WithComp $WithComp
 
-
-    New-Files -DirectoryName $capitalizedString -Files "index.tsx", "style.module.scss"
+    New-Files -DirectoryName $normalized -Files "index.tsx", "style.module.scss"
 }
 
 function New-React-Ffc {
@@ -44,13 +55,14 @@ function New-React-Ffc {
     [string]$ComponentName
     )
 
-    $firstChar = $ComponentName.Substring(0, 1).ToUpper()
-    $capitalizedString = $firstChar + $ComponentName.Substring(1)
-    $compFile = $capitalizedString + ".tsx"
+    $normalized = Normalize-ComponentName -ComponentName $ComponentName -WithSrc $WithSrc -WithComp $WithComp
+    $compFile = $normalized + ".tsx"
 
-    New-Files -DirectoryName $capitalizedString -Files $compFile, "index.ts", "style.module.scss"
+    New-Files -DirectoryName $normalized -Files $compFile, "index.ts", "style.module.scss"
 }
 
+
+# Presets
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
@@ -60,4 +72,36 @@ function New-React-Ffc {
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
+}
+
+# Utils
+function Normalize-ComponentName {
+  param (
+    [string]$ComponentName,
+    [bool]$WithSrc = $false,
+    [bool]$WithComp = $false
+    )
+
+
+    $normalized = Capitalize-FirstLetter -S $ComponentName
+
+  if ($WithComp) {
+      $normalized = 'components/' + $normalized
+    }
+
+    if ($WithSrc) {
+      $normalized = 'src/' + $normalized
+    }
+
+    return $normalized
+}
+
+function Capitalize-FirstLetter {
+    param (
+        [string]$String
+    )
+
+    $firstChar = $String.Substring(0, 1).ToUpper()
+    $capitalizedString = $firstChar + $String.Substring(1)
+    return $capitalizedString
 }
