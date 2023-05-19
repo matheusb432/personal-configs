@@ -23,11 +23,17 @@ function New-Files {
       [string[]]$Files
   )
 
-  New-Item -ItemType Directory -Path $DirectoryName | ForEach-Object {
-      foreach ($file in $Files) {
-          New-Item -ItemType File -Path $DirectoryName -Name $file
+      if (!(Test-Path $DirectoryName)) {
+        New-Item -ItemType Directory -Path $DirectoryName
       }
-  }
+
+      foreach ($file in $Files) {
+        if (!(Test-Path $DirectoryName)) {
+          New-Item -ItemType Directory -Path $DirectoryName
+        }
+        
+        New-Item -ItemType File -Path $DirectoryName -Name $file
+      }
 }
 
 function TsFile-WithTest {
@@ -45,31 +51,30 @@ function TsFile-WithTest {
       $fileName = $file + '.ts'
       $testFileName = $file + '.test.ts'
 
-      Write-Host $fileName
-      Write-Host $testFile
-
       New-Item -ItemType File -Path $testDir -Name $testFileName
       New-Item -ItemType File -Name $fileName
   }
 }
 
 function New-Rfc-WithPath {
-  param ([string[]] $ComponentNames)
+  param ([string[]] $ComponentNames, $Path = $true)
+
 
 
   foreach ($componentName in $ComponentNames) {
-    New-React-Fc -c $componentName -WithSrc $true -WithComp $true
+    New-React-Fc -c $componentName -WithSrc $Path -WithComp $Path
   }
 }
 
 function New-Rffc-WithPath {
   param (
     [string[]] $ComponentNames,
-    [bool]$WithTest = $false
+    [bool]$Test = $false,
+    [bool]$Path = $true
   )
 
   foreach ($componentName in $ComponentNames) {
-    New-React-Ffc -c $componentName -WithSrc $true -WithComp $true -WithTest $WithTest
+    New-React-Ffc -c $componentName -WithSrc $Path -WithComp $Path -WithTest $Test
   }
 }
 
@@ -100,9 +105,10 @@ function New-React-Ffc {
 
     if ($WithTest) {
       $testFile = $capitalized + '.test.tsx'
+      New-Files -DirectoryName $path -Files $tsxFile, $testFile, "index.ts", "style.module.scss"
+    } else {
+      New-Files -DirectoryName $path -Files $tsxFile, "index.ts", "style.module.scss"
     }
-
-    New-Files -DirectoryName $path -Files $tsxFile, $testFile, "index.ts", "style.module.scss"
 
     $indexPath = $path + '/index.ts'
     $indexContent = 'export * from ' +"'./"+ $capitalized + "';"
