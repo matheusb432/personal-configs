@@ -1,0 +1,229 @@
+{
+  "editor.formatOnSave": true, // TODO ! set to true normally
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll": true
+  // },
+  // ? Tailwind Dioxus intellisense
+  "tailwindCSS.experimental.classRegex": ["class: \"(.*)\""],
+  "tailwindCSS.includeLanguages": {
+    "rust": "html"
+  },
+  // ?
+  // ? Tailwind autocomplete on class fix
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true,
+  // ?
+  // ? Rust
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  // ?
+  "codemetrics.basics.ComplexityLevelExtremeDescription": "Why",
+  "codemetrics.basics.ComplexityColorExtreme": "#FF69B4",
+  "codemetrics.basics.ComplexityLevelHighDescription": "Can be better",
+  "codemetrics.basics.ComplexityColorHigh": "#D8BFD8",
+  "codemetrics.basics.ComplexityLevelNormalDescription": "This is ok",
+  "codemetrics.basics.ComplexityLevelLowDescription": "Great!",
+  "codemetrics.nodeconfiguration.ReturnStatement": 0,
+  "codemetrics.nodeconfiguration.CaseClause": 0,
+  "codemetrics.nodeconfiguration.DefaultClause": 0,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescriptreact",
+    "typescript"
+  ],
+  "git.mergeEditor": false,
+  "telemetry.telemetryLevel": "off",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "C_Cpp.updateChannel": "Insiders",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.largeFileOptimizations": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "files.autoSave": "off",
+  "workbench.startupEditor": "newUntitledFile",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "editor.fontWeight": "normal",
+  "editor.fontSize": 14,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  // "editor.fontFamily": "MonoLisa",
+  "editor.fontFamily": "Fira Code",
+  "editor.lineHeight": 0,
+  "editor.fontLigatures": true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  "tslint.jsEnable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 80,
+  "better-comments.highlightPlainText": true,
+  "prettier.bracketSameLine": true,
+  "[python]": {
+    "editor.defaultFormatter": null
+  },
+  // ? Setting default terminal as bash
+  // "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.profiles.windows": {
+    "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": []
+    }
+  },
+  "files.associations": {
+    "*.css": "css"
+  },
+  "oneDarkPro.vivid": false,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.linkedEditing": true,
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "foreground": "#ff9100ef",
+    "background": "#000000",
+    "iconColour": "#0000FF"
+  },
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "NOTE"],
+  "todo-tree.highlights.customHighlight": {
+    "NOTE": {
+      "icon": "note",
+      "type": "text-and-comment",
+      "foreground": "#ff9100dd",
+      "iconColour": "#ff9100dd",
+      "background": "#000000",
+      "gutterIcon": true
+    }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.format.config.singleQuote": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "debug.internalConsoleOptions": "neverOpen",
+  "sonarlint.rules": {
+    "javascript:S3358": {
+      "level": "off"
+    },
+    "Web:BoldAndItalicTagsCheck": {
+      "level": "off"
+    },
+    "Web:ItemTagNotWithinContainerTagCheck": {
+      "level": "off"
+    },
+    "typescript:S4624": {
+      "level": "off"
+    }
+  },
+  "redhat.telemetry.enabled": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "prettier.vueIndentScriptAndStyle": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "sonarlint.ls.javaHome": "c:\\Users\\mathe\\.vscode\\extensions\\sonarsource.sonarlint_managed-jre\\jre\\jdk-11.0.14.1+1-jre",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  // "[csharp]": {
+  //   "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  // },
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\Mateus\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\Mateus\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+    "vs-kubernetes.minikube-show-information-expiration": "2023-10-04T23:01:04.324Z"
+  },
+  "npm.keybindingsChangedWarningShown": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "yaml": true,
+    "rust": true,
+    "sql": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveshare.connectionMode": "relay",
+  "liveshare.guestApprovalRequired": true,
+  "liveshare.languages.allowGuestCommandControl": true,
+  "liveshare.anonymousGuestApproval": "accept",
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "workbench.colorTheme": "One Dark Pro",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.sortOrder": "filesFirst",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "tailwind-fold.autoFold": false,
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "material-icon-theme.activeIconPack": "react_redux",
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.trailingNewline": true,
+  "evenBetterToml.formatter.compactEntries": false,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "window.zoomLevel": 2
+}

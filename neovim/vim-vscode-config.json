@@ -1,0 +1,96 @@
+{
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-c>": false,
+    "<C-d>": false,
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["leader", "w", "w"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["leader", "w", "b"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["leader", "w", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "w", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
+      "before": ["leader", "w", "s"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["leader", "w", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["leader", "w", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["leader", "w", "m"],
+      "commands": ["workbench.action.maximizeEditor"]
+    },
+    {
+      "before": ["leader", "w", "n"],
+      "commands": ["workbench.action.minimizeOtherEditors"]
+    },
+    {
+      "before": ["leader", "w", "r"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["leader", "w", "t"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["leader", "w", "p"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["leader", "w", "n"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["leader", "s"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["leader", "a"],
+      "commands": ["workbench.action.files.saveAll"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+}
