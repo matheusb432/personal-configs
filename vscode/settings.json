@@ -225,5 +225,75 @@
   "evenBetterToml.formatter.compactEntries": false,
   "evenBetterToml.formatter.arrayTrailingComma": true,
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "git.decorations.enabled": true,
+  "workbench.layoutControl.enabled": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": false,
+      "compare": false,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": false,
+      "compare": true
+    },
+    "editorGutter": {
+      "compare": true,
+      "remote": true,
+      "share": true
+    },
+    "editorTab": {
+      "clipboard": false,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "ghpr": {
+      "worktree": false
+    },
+    "scm": {
+      "graph": false
+    },
+    "scmRepositoryInline": {
+      "graph": false
+    },
+    "scmRepository": {
+      "authors": false,
+      "generateCommitMessage": false,
+      "graph": false
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmGroup": {
+      "compare": false,
+      "openClose": false,
+      "stash": false
+    },
+    "scmItemInline": {
+      "stash": false
+    },
+    "scmItem": {
+      "clipboard": false,
+      "compare": false,
+      "history": false,
+      "remote": false,
+      "share": false,
+      "stash": false
+    }
+  },
+  "gitlens.telemetry.enabled": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "gitlens.codeLens.scopes": ["document"],
+  "editor.minimap.enabled": false,
+  "window.menuBarVisibility": "toggle"
 }

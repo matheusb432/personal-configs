@@ -29,11 +29,11 @@
 
 `F2` - Rename symbol
 
-`CTRL+F4` - Close current file
+`SHIFT+ALT+C` - [C]opy path of current file
 
-`PageUp / PageDown` - Navigate entire page lines of a file
+`CTRL+SHIFT+W` - Close [w]indow
 
-`SHIFT+ALT+C` - Copy path of current file
+`CTRL+SHIFT+T` - Reopen closed [t]ab
 
 ## Custom Shortcuts
 
@@ -56,3 +56,7 @@
 `ALT+[` - Go to start of line
 
 `ALT+]` - Go to end of line
+
+`CTRL+ALT+F` - New [f]ile
+
+`CTRL+SHIFT+X` - Open e[X]tensions
