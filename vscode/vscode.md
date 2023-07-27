@@ -1,3 +1,8 @@
+# Initial Setup
+
+- Hide activity bar
+  - To show it again: `Menu > View > Appearance > Show Activity Bar`
+
 # Themes
 
 - One Dark Pro
@@ -29,11 +34,13 @@
 
 `F2` - Rename symbol
 
-`SHIFT+ALT+C` - [C]opy path of current file
+`CTRL+F4` - Close current file
 
-`CTRL+SHIFT+W` - Close [w]indow
+`PageUp / PageDown` - Navigate entire page lines of a file
 
-`CTRL+SHIFT+T` - Reopen closed [t]ab
+`SHIFT+ALT+C` - Copy path of current file
+
+`CTRL+K CTRL+J` - Unfold all
 
 ## Custom Shortcuts
 
@@ -57,6 +64,22 @@
 
 `ALT+]` - Go to end of line
 
-`CTRL+ALT+F` - New [f]ile
+`ALT+\` - Go to Bracket | Matching code block
 
-`CTRL+SHIFT+X` - Open e[X]tensions
+`ALT+SHIFT+[` - Select to start of line
+
+`ALT+SHIFT+]` - Select to end of line
+
+`ALT+SHIFT+\` - Select to Bracket | Matching code block
+
+`CTRL+ALT+F` - New [F]ile
+
+`ALT+SHIFT+P` - Disable co[p]ilot
+
+`CTRL+SHIFT+H` - Fold (or [H]ide)
+
+`CTRL+SHIFT+S` - Unfold (or [S]how)
+
+`ALT+/` - Show/Focus hover [/ -> ?]
+
+`CTRL+K CTRL+M` - Toggle [M]inimap
