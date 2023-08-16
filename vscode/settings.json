@@ -22,6 +22,7 @@
   },
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
   // ?
   "codemetrics.basics.ComplexityLevelExtremeDescription": "Why",
   "codemetrics.basics.ComplexityColorExtreme": "#FF69B4",
@@ -128,7 +129,7 @@
       "level": "off"
     }
   },
-  "redhat.telemetry.enabled": true,
+  "redhat.telemetry.enabled": false,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
@@ -225,7 +226,6 @@
   "evenBetterToml.formatter.compactEntries": false,
   "evenBetterToml.formatter.arrayTrailingComma": true,
   "dotnetAcquisitionExtension.enableTelemetry": false,
-  "window.zoomLevel": 2,
   "git.decorations.enabled": true,
   "workbench.layoutControl.enabled": false,
   "gitlens.menus": {
@@ -295,5 +295,15 @@
   "gitlens.mode.statusBar.enabled": false,
   "gitlens.codeLens.scopes": ["document"],
   "editor.minimap.enabled": false,
-  "window.menuBarVisibility": "toggle"
+  "window.menuBarVisibility": "toggle",
+  "csharp.format.enable": false,
+  "csharp.showOmnisharpLogOnError": false,
+  "omnisharp.loggingLevel": "error",
+  "csharp.suppressDotnetRestoreNotification": true,
+  "omnisharp.disableMSBuildDiagnosticWarning": true,
+  "git.openRepositoryInParentFolders": "always",
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "window.zoomLevel": 2
 }

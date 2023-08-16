@@ -34,7 +34,7 @@
     "when": "editorTextFocus && github.copilot.activated"
   },
   {
-    "key": "ctrl+r",
+    "key": "alt+r",
     "command": "workbench.action.files.saveAll"
   },
   {
@@ -273,5 +273,79 @@
   {
     "key": "ctrl+k ctrl+m",
     "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "ctrl+shift+g h",
+    "command": "-gitlens.showQuickFileHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g shift+h",
+    "command": "-gitlens.showQuickRepoHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-references-view.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-gitlens.showQuickRepoHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showSupertypes",
+    "when": "typeHierarchyVisible && typeHierarchyDirection == 'subtypes'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showSubtypes",
+    "when": "typeHierarchyVisible && typeHierarchyDirection == 'supertypes'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showOutgoingCalls",
+    "when": "callHierarchyVisible && callHierarchyDirection == 'incomingCalls'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showIncomingCalls",
+    "when": "callHierarchyVisible && callHierarchyDirection == 'outgoingCalls'"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "-editor.showCallHierarchy",
+    "when": "editorHasCallHierarchyProvider && editorTextFocus && !inReferenceSearchEditor"
+  },
+  {
+    "key": "alt+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+alt+b",
+    "command": "-gitlens.toggleCodeLens",
+    "when": "editorTextFocus && !gitlens:disabled && !gitlens:disabledToggleCodeLens && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "alt+\\",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "-editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+\\",
+    "command": "editor.action.selectToBracket"
   }
 ]
